@@ -47,7 +47,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form")) {
 	if($data['username'] == $_POST['username'])
 	{ 
 		header ("Location: Error.php"); 
-	}else {
+	} else {
 		$insertSQL = sprintf("INSERT INTO users (username) VALUES (%s)",
                        GetSQLValueString($_POST['username'], "text"));
 		$Result1 = mysql_query($insertSQL, $usuarios) or die(mysql_error());		
